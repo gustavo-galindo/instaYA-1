@@ -1,0 +1,119 @@
+import React from 'react'
+import { Link } from "react-router-dom";
+import Navbar from './Navbar';
+
+
+const Edit = () => {
+  return (
+    <div>
+        <div className="row justify-content-center  ">
+        <div className="col-xl-10 col-lg-12 col-lg-9  ">
+            <div className="card o-hidden border-0 shadow-lg ">
+                <div className="card-body-instaya p-0 bg-fondo">
+                    <Navbar/>                    
+                    <div className="container justify-content-center col-lg-6" >
+                        {/* Formulario Agregar Orden Inicio*/}
+                            <div className="card mb-3  ">
+                                <h3 className="text-center mt-5">ORDEN 2178582243 </h3>
+                                <div className="card-body ">
+                                
+                                <form id="addForm" action="#" method="" className="needs-validation" novalidate autocomplete="off">
+                                    <div className="form-row">                   
+                                        <div className="form-group col-lg-4">
+                                            <label htmlFor="inputDate">Fecha de Recogida</label>
+                                            <input type="date" className="form-control" id="inputDate" placeholder="20/11/2022" name="date" required value={20/11/2022} />
+                                            
+                                        </div>
+                                
+                                        <div className="form-group col-lg-8">
+                                            <label>Disponibilidad Horaria</label>
+                                            <div className="d-flex flex-row justify-content-between align-items-center">
+                                            <input type="time" className="form-control" id="inputHora" name="hora" required />
+                                            <span> - </span>
+                                            <input type="time" className="form-control" id="inputHora" name="hora" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="form-row">
+
+                                        <div className="form-group col-lg-6">
+                                        <label htmlFor="inputName">Ciudad de Recogida</label>
+                                        <input type="text" className="form-control" id="inputCrecogida" name="crecogida" placeholder="Municipio-Departamento" required />
+                                        </div>
+                                        
+                                        <div className="form-group col-lg-6">
+                                        <label htmlFor="inputName">Direccion</label>
+                                        <input type="text" className="form-control" id="inputDir" name="dir" placeholder="Calle 00 # 00-00 " required />
+                                        </div>
+
+                                        
+                                    </div>
+                                    <hr />
+                                    <div className="form-row">
+
+                                        <div className="form-group col-lg-2">
+                                            <label>Alto(cm)</label>
+                                            <input type="number" max="200.00" min="1.00" step="1" className="form-control" id="inputAlto" placeholder="1"name="peso" required />
+                                        </div>
+                                        <div className="form-group col-lg-2">
+                                            <label>Largo(cm)</label>
+                                            <input type="number" max="200.00" min="1.00" step="1" className="form-control" id="inputLargo" placeholder="1"name="peso" required />
+                                        </div>
+                                        <div className="form-group col-lg-2">
+                                            <label>Acho(cm)</label>
+                                            <input type="number" max="200.00" min="1.00" step="1" className="form-control" id="inputAncho" placeholder="1"name="peso" required />
+                                        </div>
+                                        <div className="form-group col-lg-2 ml-5">
+                                            <label>Peso(Kg)</label>
+                                            <input type="number" max="40.00" min="1.00" step="0.5" className="form-control " id="inputPeso" placeholder="1"name="peso" required />
+                                        </div>
+                                    </div>
+                                    <div className="form-group ml-3">
+                                    <legend className="col-form-label  pt-0">Es mercancia delicada?</legend>
+                                    <div className="form-check form-check-inline">
+                                        <input type="radio" className="form-check-input" id="inlineRadioType1" name="roomType" value="type1" required />
+                                        <label className="form-check-label" htmlFor="inlineRadioType1">Si</label>
+                                    </div>
+                                    <div className="form-check form-check-inline ml-3">
+                                        <input type="radio" className="form-check-input" id="inlineRadioType2" name="roomType" value="type2" required />
+                                        <label className="form-check-label" htmlFor="inlineRadioType2">No</label>
+                                    </div>
+                                    
+                                    </div>
+                                    <hr />
+                                    <div className="form-row">
+
+                                        <div className="form-group col-lg-6">
+                                        <label htmlFor="inputName">Ciudad de destino</label>
+                                        <input type="text" className="form-control" id="inputCrecogida" name="crecogida" placeholder="Municipio-Departamento" required />
+                                        </div>
+                                        
+                                        <div className="form-group col-lg-6">
+                                        <label htmlFor="inputName">Direccion</label>
+                                        <input type="text" className="form-control" id="inputDir" name="dir" placeholder="Calle 00 # 00-00 " required />
+                                        </div>
+
+                                        
+                                    </div>
+                                        
+                                    <div className="form-row">
+                                    <Link to="/Home" relative="/" className="btn btn-primary bg-instaya btn-block col-lg-4 mt-5 ml-5"> Editar</Link>
+                                    <Link to="/Home" relative="/" className="btn btn-primary bg-dark btn-block col-lg-4 mt-5 ml-5"> Eliminar</Link>
+                                    </div>
+                                </form>
+                                
+                                </div>
+                            </div>
+                        {/* Formulario Agregar Orden - Fin*/} 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  )
+}
+
+export default Edit
